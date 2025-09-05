@@ -1,24 +1,17 @@
-import { Link } from "react-router-dom";
-
-function Hero() {
+export default function Hero() {
   return (
-    <section className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20">
-      <div className="max-w-7xl mx-auto text-center px-6">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Find Your Dream Home
+    <section className="relative h-80 md:h-96 bg-blue-900 flex items-center justify-center text-center text-white">
+      <img
+        src="https://images.unsplash.com/photo-1506744038136-46234a"
+        alt="Banner"
+        className="absolute inset-0 w-full h-full object-cover opacity-80"
+      />
+      <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold">
+          Find Your Dream Home in One Click!
         </h1>
-        <p className="text-lg md:text-xl mb-8">
-          Browse thousands of listings and discover the perfect property for you.
-        </p>
-        <Link
-          to="/listings"
-          className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100 transition"
-        >
-          Browse Listings
-        </Link>
+        <p className="text-lg">Buy | Sell | Rent | Explore</p>
       </div>
     </section>
   );
 }
-
-export default Hero;
